@@ -2,4 +2,16 @@
     <string name="app_name">MobiquityAssignment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_city">Add City</string>
+    <string name="bookmark_locaation">Bookmark Locaation</string>
+
+    <string name="database_error">Some error occurred.</string>
+    <string name="humidity">Humidity:</string>
+    <string name="rain_chances">Rain Chances:</string>
+    <string name="future_broadcast">Future Broadcast</string>
+    <string name="alert_no_data_found">No data found</string>
+    <string name="alert_no_internet">No internet connection. Please try again</string>
+    <string name="delete">Delete</string>
+    <string name="location">%1f, %2f</string>
+    <string name="alert_no_data">No locations bookmarked. Click here or "+" button on the bottom to bookmark locations.</string>
 </resources>

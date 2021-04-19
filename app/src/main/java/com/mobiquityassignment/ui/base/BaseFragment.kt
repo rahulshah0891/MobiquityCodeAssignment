@@ -23,12 +23,15 @@ abstract class BaseFragment<VB : ViewDataBinding, VM : ViewModel> : Fragment() {
     ): View? {
         dataBinding = DataBindingUtil.inflate(inflater, setLayout(), container, false)
         viewModel = ViewModelProvider(this).get(getViewModelClass())
+        setViews()
         return dataBinding.root
     }
 
     abstract fun setLayout(): Int
 
+    abstract fun setViews()
+
     private fun getViewModelClass(): Class<VM> {
-        return (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VM>
+        return (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<VM>
     }
 }

@@ -7,7 +7,39 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.mobiquityassignment.HomeFragment"
+        android:name="com.mobiquityassignment.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cityDetailFragment"
+            app:destination="@id/cityDetailFragment">
+            <argument
+                android:name="selectedLocation"
+                app:nullable="false"
+                app:argType="com.mobiquityassignment.data.db.entity.BookmarkedLocation" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.mobiquityassignment.ui.map.MapFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_map">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/cityDetailFragment"
+        android:name="com.mobiquityassignment.ui.citydetail.CityDetailFragment"
+        android:label="CityDetailFragment">
+        <argument
+            android:name="selectedLocation"
+            app:nullable="false"
+            app:argType="com.mobiquityassignment.data.db.entity.BookmarkedLocation" />
+    </fragment>
 </navigation>
